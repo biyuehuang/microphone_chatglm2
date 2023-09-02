@@ -24,3 +24,5 @@ export USE_XETLA=OFF
 export SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
 python generate_pyaudio_whisper_chatglm2.py
 ```
+
+code refer to https://github.com/intel-analytics/BigDL/tree/main/python/llm/example/gpu/voiceassistant
