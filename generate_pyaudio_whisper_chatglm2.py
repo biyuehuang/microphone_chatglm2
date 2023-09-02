@@ -59,7 +59,7 @@ if __name__ == '__main__':
     parser.add_argument('--llama2-repo-id-or-model-path', type=str, default="./chatglm2-6b-int4/",
                         help='The huggingface repo id for the Llama2 (e.g. `meta-llama/Llama-2-7b-chat-hf` and `meta-llama/Llama-2-13b-chat-hf`) to be downloaded'
                              ', or the path to the huggingface checkpoint folder')
-    parser.add_argument('--whisper-repo-id-or-model-path', type=str, default="/home/adc2/crystal/llm/whisper-medium-int4/",
+    parser.add_argument('--whisper-repo-id-or-model-path', type=str, default="./whisper-medium-int4/",
                         help='The huggingface repo id for the Whisper (e.g. `openai/whisper-small` and `openai/whisper-medium`) to be downloaded'
                              ', or the path to the huggingface checkpoint folder')
     parser.add_argument('--n-predict', type=int, default=128,
