@@ -108,19 +108,16 @@ def get_input_features_micro(r):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Predict Tokens using `generate()` API for Llama2 model')
-    #parser.add_argument('--llama2-repo-id-or-model-path', type=str, default="meta-llama/Llama-2-7b-chat-hf",
-    #                    help='The huggingface repo id for the Llama2 (e.g. `meta-llama/Llama-2-7b-chat-hf` and `meta-llama/Llama-2-13b-chat-hf`) to be downloaded'
-    #                         ', or the path to the huggingface checkpoint folder')
+
     parser.add_argument('--chatglm2-repo-id-or-model-path', type=str, default="/home/adc2/crystal/llm/chatglm2-6b-int4",
                         help=' to be downloaded'
                              ', or the path to the huggingface checkpoint folder')
-    #parser.add_argument('--whisper-repo-id-or-model-path', type=str, default="/opt/WD/888_crystal/LLM/whisper-medium",
-    parser.add_argument('--whisper-repo-id-or-model-path', type=str, default="/home/adc2/crystal/llm/whisper-medium-int4",                    
+    parser.add_argument('--whisper-repo-id-or-model-path', type=str, default="./whisper-medium-int4",                    
                         help='The huggingface repo id for the Whisper (e.g. `openai/whisper-small` and `openai/whisper-medium`) to be downloaded'
                              ', or the path to the huggingface checkpoint folder')
-    parser.add_argument('--audio-dir', type=str, default="~/crystal/whisper/", help="The path to the audio directory.")
-  #  parser.add_argument('--audio', type=str, default="/home/adc2/crystal/llm/chinese_10s_16k.wav", help="The absolute path to the audio directory.")#绝对路径
-    parser.add_argument('--audio', type=str, default="/home/adc2/crystal/llm/pyaudio_out.wav", help="The absolute path to the audio directory.")#绝对路径
+    parser.add_argument('--audio-dir', type=str, default="~/whisper/", help="The path to the audio directory.")
+
+    parser.add_argument('--audio', type=str, default="./input.wav", help="The absolute path to the audio directory.")#绝对路径
     parser.add_argument('--n-predict', type=int, default=128,
                         help='Max tokens to predict')
 
